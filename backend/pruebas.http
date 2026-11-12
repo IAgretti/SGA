@@ -58,3 +58,7 @@ Content-Type: application/json
     "email": "admin@sga.com",
     "password":"ClaveDePrueba123!"
 }
+
+###
+GET http://localhost:3000/alumnos
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhZThjYmUyZGFlOGEwMzFiMGJhNDJiZiIsInJvbCI6ImFkbWluIiwiaWF0IjoxNzk0NTA3NzA4LCJleHAiOjE3OTQ1MTEzMDh9.vJbyQWwW8y6YTBU2EKEUVbTn87wJxZqYwzKZQuy0pnY

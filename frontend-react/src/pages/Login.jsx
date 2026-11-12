@@ -1,6 +1,6 @@
+import { useState } from "react"
 import {Alert, Box, Button, TextField, Typography } from "@mui/material"
 import { useTheme } from "@mui/material/styles" 
-import { useState } from "react"
 
 export default function Login() {
     const theme = useTheme()
@@ -32,7 +32,8 @@ export default function Login() {
             if (!respuesta.ok) {
                 throw new Error(datos.mensaje || "No se pudo iniciar sesión")
             }
-            setUsuario(datos.usuario)
+            localStorage.setItem("token", datos.token)
+            setUsuario(datos)
             setMensaje(datos.mensaje)
 
             setEmail("")
@@ -45,15 +46,18 @@ export default function Login() {
         }
     }
     return (
-        <Box component="main" sx={{
+        <Box component="main" 
+        sx={{
             minHeight: "100vh",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
             px: 2,
             backgroundColor: theme.palette.background.default, 
-        }}>
-            <Box component="form" onSubmit={login}
+        }}
+        >
+            <Box component="form" 
+            onSubmit={login}
             sx={{
                 width: "100%",
                 maxWidth: 420,
@@ -64,7 +68,8 @@ export default function Login() {
                 boxShadow: `0 12px 32px ${theme.palette.divider}`
             }}
             >
-            <Typography variant="h4" component="h1" sx={{
+            <Typography variant="h4" component="h1" 
+            sx={{
                 mb: 3,
                 textAlign: "center",
                 color: theme.palette.text.primary,
@@ -81,7 +86,9 @@ export default function Login() {
             required
             fullWidth
             margin="normal"
-            sx={{ "& .MuiOutlinedInput-root": {borderRadius: 2,}}}
+            sx={{ 
+                "& .MuiOutlinedInput-root": {borderRadius: 2,},
+            }}
             />
             <TextField 
             type="password"
@@ -92,7 +99,8 @@ export default function Login() {
             required
             fullWidth
             margin="normal"
-            sx={{ "& .MuiOutlinedInput-root": {borderRadius: 2,}}}
+            sx={{ "& .MuiOutlinedInput-root": {borderRadius: 2,},
+        }} // aplica un borde redondeado al campo de contraseña
             />
             {error && (
                 <Alert severity="error" sx={{mt: 2, borderRadius: 2}}>
