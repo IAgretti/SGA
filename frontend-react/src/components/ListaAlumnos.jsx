@@ -62,7 +62,7 @@ export function ListaAlumnos({ actualizar, onAlumnoCreado, onEditarAlumno }) {
         }
     }
         cargarAlumnos()
-    }, [actualizar])
+    }, [actualizar, token])
 
     if (cargando) {
         return (
