@@ -94,6 +94,7 @@ function FormularioD({ onDocenteCreado, docenteEditar, onCancelar }){
                     value={formulario.dni}
                     onChange={manejarCambio}
                     required
+                    disabled={Boolean(docenteEditar)}
                     fullWidth
                 />
                 <TextField

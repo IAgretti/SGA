@@ -28,6 +28,18 @@ const AuthProvider = ({ children }) => {
             if (!respuesta.ok) {
                 throw new Error("Sesión inválida")
             }
+                const respuestaD = await fetch(`${API_URL}/docentes`,
+                    {headers: {Authorization: `Bearer ${tokenGuardado}`}}
+                )
+            if (!respuestaD.ok) {
+                throw new Error("Sesión inválida")
+            }
+                const respuestaC = await fetch(`${API_URL}/cursos`,
+                    {headers: {Authorization: `Bearer ${tokenGuardado}`}}
+                )
+            if (!respuestaC.ok) {
+                throw new Error("Sesión inválida")
+            }
             setToken(tokenGuardado)
             } catch (error){
                 console.error("Error al iniciar sesión", error)

@@ -43,25 +43,27 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhZmNjZDU5M
 GET http://localhost:3000/docentes
 
 ###
-POST http://localhost:3000/docentes
+POST http://localhost:3000/cursos
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZiMDZlMWZiOTVlNzg1OTQ3OGU0YmYwZiIsInJvbCI6ImFkbWluIiwiaWF0IjoxNzk1Njk4MTk3LCJleHAiOjE3OTU3MDE3OTd9.coyPIj9h76EnkEmSWSf1CYmTEqLR2v4f-yHiLg1dapA
 
 {
-    "dni": 5222311,
+    "codigo": "C02",
     "nombre": "Rocío",
-    "especialidad": "Programación",
-    "correo": "rocio@mail.com"
+    "descripcion": "Programación",
+    "duracion": 12
 }
 
 ###
-POST https://sga-backend-prueba.onrender.com/auth/login
+POST http://localhost:3000/auth/login
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZiMDZlMWZiOTVlNzg1OTQ3OGU0YmYwZiIsInJvbCI6ImFkbWluIiwiaWF0IjoxNzk1Njk4MTk3LCJleHAiOjE3OTU3MDE3OTd9.coyPIj9h76EnkEmSWSf1CYmTEqLR2v4f-yHiLg1dapA
 
 {
     "email": "admin@sga.com",
-    "password":"claveDePrueba123!"
+    "password":"claveAdmin123"
 }
 
 ###
-GET http://localhost:3000/alumnos
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhZmNjZDU5MjliNzVlNGVhOWExYzQ5ZiIsInJvbCI6ImFkbWluIiwiaWF0IjoxNzk1NTU2MTY3LCJleHAiOjE3OTU1NTk3Njd9.n3oezQSyIGeCyjqvWX7OM8G3SMmrVxKtdPMV_EwJXHM
+GET http://localhost:3000/cursos
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZiMDZlMWZiOTVlNzg1OTQ3OGU0YmYwZiIsInJvbCI6ImFkbWluIiwiaWF0IjoxNzk1Njk4MTk3LCJleHAiOjE3OTU3MDE3OTd9.coyPIj9h76EnkEmSWSf1CYmTEqLR2v4f-yHiLg1dapA

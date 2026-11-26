@@ -102,6 +102,7 @@ function FormularioA({ onAlumnoCreado, alumnoEditar, onCancelar }){
                     value={formulario.legajo}
                     onChange={manejarCambio}
                     required
+                    disabled={Boolean(alumnoEditar)}
                     fullWidth
                 />
                 <TextField

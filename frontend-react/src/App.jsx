@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import LayoutPpal from "./layouts/LayoutPpal";
 import Inicio from "./pages/Inicio";
 import Docentes from "./pages/Docentes";
+import Cursos from "./pages/Cursos"
 import Login from "./pages/Login";
 import RutaProtegida from "./components/RutaProtegida";
 
@@ -16,6 +17,7 @@ function App() {
           <Route index element={<Inicio />} />
           <Route path="alumnos" element={<Alumnos />} />
           <Route path="docentes" element={<Docentes />} />
+          <Route path="cursos" element={<Cursos />} />
           <Route path="ayuda" element={<FAQ />} />
         </Route>
       </Route>

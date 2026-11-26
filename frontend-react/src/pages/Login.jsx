@@ -4,6 +4,7 @@ import { useTheme } from "@mui/material/styles"
 import { useAuth } from "../context/useAuth"
 import { useNavigate } from "react-router-dom"
 import API_URL from "../config/api"
+const API = `${API_URL}/auth/login`
 
 export default function Login() {
     const navigate = useNavigate()
@@ -25,7 +26,7 @@ export default function Login() {
         setMensaje("")
 
         try {
-            const respuesta = await fetch(`${API_URL}/auth/login`,
+            const respuesta = await fetch(API,
                 {
                     method: "POST",
                     headers: {"Content-Type":"application/json"},

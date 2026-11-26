@@ -13,6 +13,7 @@ function docenteCreado() {
 
 function seleccionarDocente(alumno) {
   setDocenteEditar(alumno)
+  window.scrollTo({ top: 0, behavior: "smooth"})
 }
 
 return (

@@ -15,6 +15,7 @@ function alumnoCreado() {
 
 function seleccionarAlumno(alumno) {
   setAlumnoEditar(alumno)
+  window.scrollTo({ top: 0, behavior: "smooth"})
 }
 
 return (
